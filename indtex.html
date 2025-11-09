@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Telegram — @jeetmodz</title>
+
+  <!-- Auto redirect as fallback for very old browsers (2s) -->
+  <meta http-equiv="refresh" content="2;url=https://t.me/jeetmodz1">
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1724;
+      --accent:#2dd4bf;
+      --muted:#9aa4b2;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:linear-gradient(135deg,#071029 0%, #0b1220 100%);color:#eef2f7}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:520px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    h1{margin:0 0 8px;font-size:20px}
+    p{margin:0 0 16px;color:var(--muted)}
+    .hero{height:160px;border-radius:10px;overflow:hidden;margin-bottom:16px;background:linear-gradient(90deg,#021224, #072235);display:flex;align-items:center;justify-content:center}
+    .hero img{max-width:100%;max-height:100%;object-fit:cover}
+    .row{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{appearance:none;border:0;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#042024}
+    .btn-ghost{background:transparent;color:#cfeee6;border:1px solid rgba(255,255,255,0.04)}
+    .muted{color:var(--muted);font-size:13px}
+    .small{font-size:13px}
+    .copy-field{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+    .input-like{background:#071625;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);color:#dff7f0;font-family:monospace}
+    .countdown{margin-left:auto;color:var(--muted);font-weight:600}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    .skip{background:#111827;color:#fff;padding:8px 10px;border-radius:10px;border:0;cursor:pointer}
+  </style>
+
+  <script>
+    // Link + username (change here if needed)
+    const tgLink = "https://t.me/jeetmodz1";
+    const tgHandle = "@jeetmodz";
+
+    // Auto-redirect after delay (milliseconds)
+    const REDIRECT_DELAY = 1000; // 1 second
+
+    // Countdown UI
+    let remaining = Math.ceil(REDIRECT_DELAY/1000);
+    function tickCountdown(){
+      const el = document.getElementById('cd');
+      if (!el) return;
+      el.textContent = remaining;
+      if (remaining <= 0) return;
+      remaining -= 1;
+      setTimeout(tickCountdown, 1000);
+    }
+
+    // Perform redirect (use replace so back doesn't keep this page)
+    function goNow(){
+      try {
+        window.location.replace(tgLink);
+      } catch(e){
+        window.open(tgLink, "_blank");
+      }
+    }
+
+    // Copy username to clipboard
+    function copyHandle(){
+      navigator.clipboard.writeText(tgHandle).then(()=>{
+        const b = document.getElementById('copyBtn');
+        b.textContent = 'COPIED';
+        setTimeout(()=> b.textContent = 'COPY',1500);
+      }).catch(()=>{
+        alert('Copy failed —अपने फोन/ब्राउज़र के शेयर विकल्प से कॉपी करिए: ' + tgHandle);
+      });
+    }
+
+    // On DOM ready
+    document.addEventListener('DOMContentLoaded', function(){
+      // start countdown text
+      tickCountdown();
+      // schedule redirect
+      setTimeout(goNow, REDIRECT_DELAY);
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="title">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+        <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(90deg,#06b6d4,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700">JM</div>
+        <div style="flex:1">
+          <h1 id="title">Join Telegram — @jeetmodz</h1>
+          <p class="muted small">Tera papa — Sky randi scammer project · Buy payment swb ka fast</p>
+        </div>
+        <div class="countdown muted small">Redirecting in <span id="cd">1</span>s</div>
+      </div>
+
+      <div class="hero" aria-hidden="true">
+        <!-- Replace with your image URL if you have one -->
+        <!-- <img src="https://example.com/your-image.jpg" alt="Join @jeetmodz"> -->
+        <svg width="220" height="120" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Telegram">
+          <rect width="220" height="120" rx="10" fill="#0077B5"/>
+          <text x="50%" y="50%" fill="#fff" font-size="22" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif">@jeetmodz</text>
+        </svg>
+      </div>
+
+      <div class="copy-field">
+        <div class="input-like" aria-hidden="false" style="flex:1;">@jeetmodz</div>
+        <button id="copyBtn" class="btn btn-ghost" onclick="copyHandle()">COPY</button>
+        <button class="btn btn-primary" onclick="goNow()" title="Open Telegram">JOIN</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+        <a href="https://t.me/jeetmodz1" class="btn btn-ghost" target="_blank" rel="noopener">Open in Telegram</a>
+        <button class="skip" onclick="goNow()">Skip & Open Now</button>
+      </div>
+
+      <footer>
+        अगर रिडायरेक्ट नहीं हुआ — <a href="https://t.me/jeetmodz1" target="_blank" style="color:var(--accent);text-decoration:none">यहाँ क्लिक करें</a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
